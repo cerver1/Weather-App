@@ -7,8 +7,17 @@
 </p>
 
 <p align='center'>
+  
   <a href="https://github.com/Kotlin">
-  <img src="https://img.shields.io/badge/built%20with-Kotlin-orange" />
-</a>
-  <a href='https://github.com/adpth'><img  src='https://img.shields.io/badge/Coded%20By-Adpth%20-blue'/>
+    <img src="https://img.shields.io/badge/built%20with-Kotlin-orange" />
+  </a>
+  
+  <a href='https://github.com/adpth'>
+     <img  src='https://img.shields.io/badge/Coded%20By-Adpth%20-blue'/>
+  </a>
+  
+  <a href='https://www.instagram.com/adpth'>
+     <img  src='https://img.shields.io/badge/Follow%20On-Adpth%20-red'/>
+  </a>
+  
 </p>
