@@ -8,8 +8,8 @@
 
 <p align='center'>
   
-  <a href="https://github.com/Kotlin">
-    <img src="https://img.shields.io/badge/built%20with-Kotlin-orange" />
+  <a href="https://www.java.com/en/download/">
+    <img src="https://img.shields.io/badge/built%20with-Java-orange" />
   </a>
   
   <a href='https://github.com/adpth'>
