@@ -145,308 +145,308 @@
                 android:layout_weight="4"
                 android:background="@android:color/transparent"
                 android:hint="@string/search_your_area"
+                android:autofillHints="@string/search_your_area"
                 android:paddingLeft="12dp"
-                android:paddingRight="12dp" />
+                android:paddingRight="12dp"
+                android:inputType="text"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:contentDescription="@string/search_your_area"
                 android:layout_weight="0"
-                android:backgroundTint="@color/colorPrimary"
                 android:padding="12dp"
-                android:src="@drawable/ic_search" />
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_search"/>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:orientation="vertical"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="8dp"
+        android:background="#F6F3EF"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintEnd_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/wind_anim"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/wind"
+                app:lottie_url="REPLACE_JSON_URL" />
+
+            <TextView
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind_no"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:background="#F6F3EF"
+        app:cardCornerRadius="7dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:padding="14dp">
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="7dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#F6F3EF"
-                app:cardCornerRadius="7dp">
+            <ImageView
+                android:id="@+id/humidity_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/humidity"
+                android:src="@drawable/humidity"
+                android:visibility="invisible" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="7dp">
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity_no"
+                android:visibility="gone" />
 
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/wind_anim"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:scaleType="centerCrop"
-                        app:lottie_autoPlay="false"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/wind"
-                        app:lottie_url="REPLACE_JSON_URL" />
-
-                    <TextView
-                        android:id="@+id/wind"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/wind_no"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/wind" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:background="#F6F3EF"
-                app:cardCornerRadius="7dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="7dp">
-
-                    <ImageView
-                        android:id="@+id/humidity_img"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/humidity"
-                        android:visibility="invisible" />
-
-                    <TextView
-                        android:id="@+id/humidity"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/humidity_no"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/humidity" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:background="#F6F3EF"
-                android:padding="7dp"
-                app:cardCornerRadius="7dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/pressure_anim"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="invisible"
-                        app:lottie_autoPlay="false"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/pressure"
-                        app:lottie_url="REPLACE_JSON_URL" />
-
-                    <TextView
-                        android:id="@+id/pressure"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pressure_no"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pressure" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity" />
 
         </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="#F6F3EF"
+        android:padding="7dp"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@+id/cardView2">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="14dp">
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="#F6F3EF"
-                app:cardCornerRadius="7dp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/pressure_anim"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/pressure"
+                app:lottie_url="REPLACE_JSON_URL" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pressure_no"
+                android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/sunrise_img"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/dawn"
-                        android:visibility="invisible" />
-
-                    <TextView
-                        android:id="@+id/sunrise"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sunrise_no"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sunrise" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:background="#F6F3EF"
-                app:cardCornerRadius="7dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="7dp">
-
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/globe_anim"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="invisible"
-                        app:lottie_autoPlay="false"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/globe"
-                        app:lottie_url="REPLACE_JSON_URL" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/longe" />
-
-                        <TextView
-                            android:id="@+id/lon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/longitude"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/lat" />
-
-                        <TextView
-                            android:id="@+id/lat"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/latitude"
-                            android:visibility="gone" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_marginStart="7dp"
-                android:layout_marginLeft="7dp"
-                android:background="#F6F3EF"
-                app:cardCornerRadius="7dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/sunset_img"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/sunset"
-                        android:visibility="invisible" />
-
-                    <TextView
-                        android:id="@+id/sunset"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sunset_no"
-                        android:visibility="gone" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sunset" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pressure" />
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="#F6F3EF"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView7"
+        app:layout_constraintEnd_toStartOf="@+id/cardView7"
+        app:layout_constraintTop_toTopOf="@+id/cardView7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sunrise_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/sunrise"
+                android:src="@drawable/dawn"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/sunrise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunrise_no"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunrise" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:background="#F6F3EF"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/globe_anim"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleType="centerCrop"
+                android:visibility="invisible"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/globe"
+                app:lottie_url="REPLACE_JSON_URL" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longe" />
+
+                <TextView
+                    android:id="@+id/lon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/longitude"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lat" />
+
+                <TextView
+                    android:id="@+id/lat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/latitude"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="#F6F3EF"
+        app:cardCornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView7"
+        app:layout_constraintStart_toEndOf="@+id/cardView7"
+        app:layout_constraintTop_toTopOf="@+id/cardView7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/sunset_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/sunset"
+                android:src="@drawable/sunset"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/sunset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunset_no"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunset" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
